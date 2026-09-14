@@ -146,12 +146,6 @@
   }
 }
 
-.btn-outline {
-  &-primary {
-    color: $white;
-  }
-}
-
 .btn-link,
 .btn-link:hover {
   border-color: transparent;
@@ -172,20 +166,11 @@
 
 // Typography
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+legend {
+  color: var(--bs-emphasis-color);
 }
 
 // Forms
-
-legend {
-  color: $white;
-}
 
 .input-group-addon {
   @include btn-shadow($secondary);
@@ -208,6 +193,7 @@ legend {
     }
 
     &.disabled {
+      color: $gray-500;
       border: 1px solid rgba(0, 0, 0, .6);
     }
   }
@@ -241,7 +227,7 @@ legend {
   .nav-link.disabled,
   .nav-link.disabled:hover {
     @include btn-shadow($gray-800);
-    color: $nav-link-disabled-color;
+    color: $gray-500;
   }
 }
 
@@ -310,31 +296,104 @@ legend {
   }
 }
 
-.tooltip {
-  --bs-tooltip-bg: var(--bs-tertiary-bg);
-  --bs-tooltip-color: var(--bs-emphasis-color);
-}
-
 // Containers
 
 .list-group {
   &-item {
-    color: $white;
-
     &-light {
       color: $dark;
     }
   }
 
-  &-item-action:hover {
-    background-color: shade-color($gray-900, 10%);
-  }
-
   @each $color, $value in $theme-colors {
     &-item-#{$color} {
       background-color: $value;
-      border-color: $list-group-border-color;
+      border-color: var(--bs-list-group-border-color);
     }
   }
 }
 
+// Color modes
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+    }
+
+    .btn-outline-primary {
+      color: $white;
+    }
+
+    .table {
+      --bs-table-border-color: rgba(0, 0, 0, .6);
+      --bs-table-hover-bg: rgba(255, 255, 255, .075);
+    }
+
+    .dropdown-menu {
+      --bs-dropdown-bg: #{$gray-800};
+      --bs-dropdown-divider-bg: rgba(0, 0, 0, .15);
+      --bs-dropdown-link-color: #{$body-color-dark};
+      --bs-dropdown-link-hover-color: #{$white};
+      --bs-dropdown-link-hover-bg: #{$gray-900};
+      --bs-dropdown-link-active-color: #{$white};
+      --bs-dropdown-link-active-bg: #{$gray-900};
+    }
+
+    .card {
+      --bs-card-bg: #{lighten($gray-900, 5%)};
+      --bs-card-cap-bg: #{lighten($gray-800, 10%)};
+    }
+
+    .accordion {
+      --bs-accordion-bg: #{lighten($gray-900, 5%)};
+      --bs-accordion-active-color: #{$white};
+    }
+
+    .tooltip {
+      --bs-tooltip-bg: #{$gray-100};
+      --bs-tooltip-color: #{$black};
+    }
+
+    .popover {
+      --bs-popover-bg: #{lighten($gray-900, 5%)};
+    }
+
+    .toast {
+      --bs-toast-bg: #{lighten($gray-900, 5%)};
+      --bs-toast-border-color: rgba(0, 0, 0, .2);
+      --bs-toast-header-color: #{$body-color-dark};
+      --bs-toast-header-bg: #{lighten($gray-900, 5%)};
+      --bs-toast-header-border-color: rgba(0, 0, 0, .2);
+    }
+
+    .modal {
+      --bs-modal-bg: #{lighten($gray-900, 5%)};
+      --bs-modal-header-border-color: rgba(0, 0, 0, .2);
+    }
+
+    .progress {
+      --bs-progress-bg: #{darken($gray-900, 5%)};
+      --bs-progress-bar-color: #{$gray-600};
+    }
+
+    .list-group {
+      --bs-list-group-color: #{$white};
+      --bs-list-group-bg: #{lighten($gray-900, 5%)};
+      --bs-list-group-action-color: #{$white};
+      --bs-list-group-action-hover-color: #{$white};
+      --bs-list-group-action-hover-bg: #{shade-color($gray-900, 10%)};
+      --bs-list-group-action-active-color: #{$white};
+      --bs-list-group-action-active-bg: #{lighten($gray-900, 10%)};
+      --bs-list-group-active-color: #{$white};
+      --bs-list-group-active-bg: #{lighten($gray-900, 10%)};
+      --bs-list-group-active-border-color: rgba(0, 0, 0, .6);
+      --bs-list-group-disabled-color: #{$gray-700};
+    }
+  }
+}
