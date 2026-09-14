@@ -20,8 +20,9 @@
 > **Note (this fork):** the Slate theme has been reworked to support
 > [Bootstrap 5.3 color modes](https://getbootstrap.com/docs/5.3/customize/color-modes/).
 > The default (no attribute, or `data-bs-theme="light"`) is a new light
-> variant of Slate, and `data-bs-theme="dark"` on `<html>` (or any container)
-> restores the classic dark Slate look. Existing pages that want to keep the
+> variant of Slate (where `primary` is a light gray with dark text), and
+> `data-bs-theme="dark"` on `<html>` (or any container) restores the classic
+> dark Slate look with its gunmetal primary color. Existing pages that want to keep the
 > classic appearance should add `data-bs-theme="dark"` to their `<html>` tag.
 
 ## Usage

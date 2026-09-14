@@ -158,9 +158,12 @@
   }
 }
 
+.btn-outline-primary {
+  color: $gray-700;
+}
+
 .btn-check:checked + .btn,
 .btn-check + .btn:hover {
-  color: $white;
   border-color: rgba(0, 0, 0, .6);
 }
 
@@ -281,7 +284,8 @@ legend {
     }
   }
 
-  &-light {
+  &-light,
+  &-primary {
     &,
     a:not(.btn),
     .alert-link {
@@ -291,7 +295,8 @@ legend {
 }
 
 .badge {
-  &.bg-light {
+  &.bg-light,
+  &.bg-primary {
     color: $dark;
   }
 }
@@ -317,6 +322,10 @@ legend {
 
 @if $enable-dark-mode {
   @include color-mode(dark) {
+    // Classic Slate uses gunmetal gray as the primary color
+    --bs-primary: #{$gray-800};
+    --bs-primary-rgb: #{to-rgb($gray-800)};
+
     h1,
     h2,
     h3,
@@ -326,8 +335,70 @@ legend {
       text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
     }
 
+    .btn-primary {
+      @include button-variant($gray-800, rgba($black, .6));
+      @include btn-shadow($gray-800);
+
+      &:not([disabled]):not(.disabled):hover {
+        @include btn-shadow-inverse($gray-800);
+      }
+
+      &:not([disabled]):not(.disabled):active:hover,
+      &:not([disabled]):not(.disabled).active:hover {
+        @include btn-shadow-inverse-dark($gray-800);
+      }
+    }
+
     .btn-outline-primary {
+      @include button-outline-variant($gray-800);
       color: $white;
+    }
+
+    .text-bg-primary {
+      color: $white !important;
+    }
+
+    .badge.bg-primary {
+      color: $white;
+    }
+
+    .navbar.bg-primary {
+      .nav-link {
+        &:hover {
+          @include btn-shadow-inverse($gray-800);
+        }
+
+        &:active,
+        &.active {
+          @include btn-shadow-inverse-dark($gray-800);
+        }
+      }
+    }
+
+    .alert-primary {
+      background-color: $gray-800;
+
+      &,
+      a:not(.btn),
+      .alert-link {
+        color: $white;
+      }
+    }
+
+    .table-primary {
+      --bs-table-color: #{$white};
+      --bs-table-bg: #{$gray-800};
+      --bs-table-border-color: rgba(0, 0, 0, .6);
+      --bs-table-striped-bg: rgba(255, 255, 255, .05);
+      --bs-table-striped-color: #{$white};
+      --bs-table-hover-bg: rgba(255, 255, 255, .075);
+      --bs-table-hover-color: #{$white};
+      --bs-table-active-bg: rgba(255, 255, 255, .1);
+      --bs-table-active-color: #{$white};
+    }
+
+    .list-group-item-primary {
+      background-color: $gray-800;
     }
 
     .table {

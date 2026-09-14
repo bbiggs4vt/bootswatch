@@ -30,7 +30,7 @@ $green:   #62c462 !default;
 $teal:    #20c997 !default;
 $cyan:    #5bc0de !default;
 
-$primary:       $gray-800 !default;
+$primary:       $gray-400 !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -40,6 +40,13 @@ $light:         $gray-200 !default;
 $dark:          $gray-900 !default;
 
 $min-contrast-ratio:   1.95 !default;
+
+// Options
+
+// Keep interactive states (checked inputs, active items, focus rings) on the
+// classic gunmetal gray in both color modes.
+$component-active-bg:  $gray-800 !default;
+$focus-ring-color:     rgba($gray-800, .25) !default;
 
 // Body
 
@@ -138,6 +145,7 @@ $modal-content-bg:                  $white !default;
 // Progress bars
 
 $progress-bar-color:                $white !default;
+$progress-bar-bg:                   $gray-800 !default;
 
 // List group
 
@@ -164,6 +172,8 @@ $pre-color:                         inherit !default;
 // `[data-bs-theme="dark"]` color mode variables.
 
 $primary-bg-subtle-dark:            lighten($gray-800, 10%) !default;
+$primary-text-emphasis-dark:        mix($white, $gray-800, 40%) !default;
+$primary-border-subtle-dark:        mix($black, $gray-800, 40%) !default;
 
 $body-bg-dark:                      $gray-900 !default;
 $body-color-dark:                   #aaa !default;
