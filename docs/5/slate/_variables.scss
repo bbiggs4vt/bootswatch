@@ -180,7 +180,7 @@ $primary-text-emphasis-dark:        mix($white, $gray-800, 40%) !default;
 $primary-border-subtle-dark:        mix($black, $gray-800, 40%) !default;
 
 $body-bg-dark:                      $gray-900 !default;
-$body-color-dark:                   #aaa !default;
+$body-color-dark:                   $white !default;
 $body-secondary-bg-dark:            lighten($gray-900, 5%) !default;
 $body-tertiary-bg-dark:             lighten($gray-900, 10%) !default;
 $body-emphasis-color-dark:          $white !default;

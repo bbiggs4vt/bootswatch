@@ -134,18 +134,18 @@
 
 [data-bs-theme=dark] {
   color-scheme: dark;
-  --bs-body-color: #aaa;
-  --bs-body-color-rgb: 170, 170, 170;
+  --bs-body-color: #fff;
+  --bs-body-color-rgb: 255, 255, 255;
   --bs-body-bg: #272b30;
   --bs-body-bg-rgb: 39, 43, 48;
   --bs-emphasis-color: #fff;
   --bs-emphasis-color-rgb: 255, 255, 255;
-  --bs-secondary-color: rgba(170, 170, 170, 0.75);
-  --bs-secondary-color-rgb: 170, 170, 170;
+  --bs-secondary-color: rgba(255, 255, 255, 0.75);
+  --bs-secondary-color-rgb: 255, 255, 255;
   --bs-secondary-bg: #32383e;
   --bs-secondary-bg-rgb: 50, 56, 62;
-  --bs-tertiary-color: rgba(170, 170, 170, 0.5);
-  --bs-tertiary-color-rgb: 170, 170, 170;
+  --bs-tertiary-color: rgba(255, 255, 255, 0.5);
+  --bs-tertiary-color-rgb: 255, 255, 255;
   --bs-tertiary-bg: #3e444c;
   --bs-tertiary-bg-rgb: 62, 68, 76;
   --bs-primary-text-emphasis: #898c8f;
@@ -178,7 +178,7 @@
   --bs-link-color-rgb: 255, 255, 255;
   --bs-link-hover-color-rgb: 204, 204, 204;
   --bs-code-color: #f18bba;
-  --bs-highlight-color: #aaa;
+  --bs-highlight-color: #fff;
   --bs-highlight-bg: #633b02;
   --bs-border-color: #52575c;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.6);
@@ -2377,7 +2377,7 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] .form-select {
-  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23aaa' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 
 .form-check {
@@ -12580,7 +12580,7 @@ legend {
 [data-bs-theme=dark] .dropdown-menu {
   --bs-dropdown-bg: #3a3f44;
   --bs-dropdown-divider-bg: rgba(0, 0, 0, .15);
-  --bs-dropdown-link-color: #aaa;
+  --bs-dropdown-link-color: #fff;
   --bs-dropdown-link-hover-color: #fff;
   --bs-dropdown-link-hover-bg: #272b30;
   --bs-dropdown-link-active-color: #fff;
@@ -12604,7 +12604,7 @@ legend {
 [data-bs-theme=dark] .toast {
   --bs-toast-bg: #32383e;
   --bs-toast-border-color: rgba(0, 0, 0, .2);
-  --bs-toast-header-color: #aaa;
+  --bs-toast-header-color: #fff;
   --bs-toast-header-bg: #32383e;
   --bs-toast-header-border-color: rgba(0, 0, 0, .2);
 }
