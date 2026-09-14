@@ -295,9 +295,13 @@ legend {
 }
 
 .badge {
-  &.bg-light,
-  &.bg-primary {
+  &.bg-light {
     color: $dark;
+  }
+
+  &.bg-secondary,
+  &.bg-dark {
+    color: $white;
   }
 }
 
@@ -356,10 +360,6 @@ legend {
 
     .text-bg-primary {
       color: $white !important;
-    }
-
-    .badge.bg-primary {
-      color: $white;
     }
 
     .navbar.bg-primary {

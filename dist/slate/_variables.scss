@@ -125,6 +125,10 @@ $pagination-active-border-color:    rgba($black, .6) !default;
 $pagination-disabled-bg:            transparent !default;
 $pagination-disabled-border-color:  rgba($black, .6) !default;
 
+// Badges
+
+$badge-color:                       var(--bs-emphasis-color) !default;
+
 // Cards
 
 $card-bg:                           $white !default;

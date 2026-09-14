@@ -4842,7 +4842,7 @@ textarea.form-control-lg {
   --bs-badge-padding-y: 0.35em;
   --bs-badge-font-size: 0.75em;
   --bs-badge-font-weight: 700;
-  --bs-badge-color: #fff;
+  --bs-badge-color: var(--bs-emphasis-color);
   --bs-badge-border-radius: var(--bs-border-radius);
   display: inline-block;
   padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
@@ -12437,8 +12437,11 @@ legend {
   color: #272b30;
 }
 
-.badge.bg-light, .badge.bg-primary {
+.badge.bg-light {
   color: #272b30;
+}
+.badge.bg-secondary, .badge.bg-dark {
+  color: #fff;
 }
 
 .list-group-item-light {
@@ -12539,9 +12542,6 @@ legend {
 }
 [data-bs-theme=dark] .text-bg-primary {
   color: #fff !important;
-}
-[data-bs-theme=dark] .badge.bg-primary {
-  color: #fff;
 }
 [data-bs-theme=dark] .navbar.bg-primary .nav-link:hover {
   background-image: linear-gradient(#313539, #34393d 40%, #373b40);
