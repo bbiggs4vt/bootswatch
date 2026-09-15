@@ -339,23 +339,41 @@ legend {
       text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
     }
 
-    .btn-primary {
-      @include button-variant($gray-800, rgba($black, .6));
-      @include btn-shadow($gray-800);
+    // Re-emit every button variant inside the dark scope, in theme-color
+    // order, so class stacking (e.g. .btn-primary.btn-info for an active
+    // state) resolves by source order exactly as it does in light mode.
+    @each $color, $value in $theme-colors {
+      $bg: if($color == "primary", $gray-800, $value);
 
-      &:not([disabled]):not(.disabled):hover {
-        @include btn-shadow-inverse($gray-800);
-      }
+      .btn-#{$color} {
+        @if $color == "primary" {
+          @include button-variant($bg, rgba($black, .6));
+        } @else {
+          @include button-variant($bg, $bg);
+        }
+        @include btn-shadow($bg);
 
-      &:not([disabled]):not(.disabled):active:hover,
-      &:not([disabled]):not(.disabled).active:hover {
-        @include btn-shadow-inverse-dark($gray-800);
+        &:not([disabled]):not(.disabled):hover {
+          @include btn-shadow-inverse($bg);
+        }
+
+        &:not([disabled]):not(.disabled):active:hover,
+        &:not([disabled]):not(.disabled).active:hover {
+          @include btn-shadow-inverse-dark($bg);
+        }
       }
     }
 
-    .btn-outline-primary {
-      @include button-outline-variant($gray-800);
-      color: $white;
+    @each $color, $value in $theme-colors {
+      $c: if($color == "primary", $gray-800, $value);
+
+      .btn-outline-#{$color} {
+        @include button-outline-variant($c);
+
+        @if $color == "primary" {
+          color: $white;
+        }
+      }
     }
 
     .text-bg-primary {
