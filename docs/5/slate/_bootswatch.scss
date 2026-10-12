@@ -181,6 +181,10 @@ legend {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
+.form-switch .form-check-input:not(:checked) {
+  background-color: $gray-400;
+}
+
 // Navs
 
 .nav-tabs {
@@ -442,6 +446,10 @@ legend {
     .accordion {
       --bs-accordion-bg: #{lighten($gray-900, 5%)};
       --bs-accordion-active-color: #{$white};
+    }
+
+    .form-switch .form-check-input:not(:checked) {
+      background-color: $gray-600;
     }
 
     .tooltip {

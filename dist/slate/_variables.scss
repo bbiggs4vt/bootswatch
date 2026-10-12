@@ -84,6 +84,9 @@ $input-disabled-bg:                 #ccc !default;
 
 $form-check-input-bg:                     $white !default;
 
+$form-switch-color:                 $white !default;
+$form-switch-focus-color:           $white !default;
+
 $form-select-disabled-bg:           $input-disabled-bg !default;
 $form-select-disabled-color:        $input-disabled-color !default;
 
@@ -185,5 +188,8 @@ $body-secondary-bg-dark:            lighten($gray-900, 5%) !default;
 $body-tertiary-bg-dark:             lighten($gray-900, 10%) !default;
 $body-emphasis-color-dark:          $white !default;
 $border-color-translucent-dark:     rgba($black, .6) !default;
+
+// Switch tracks are gray in both modes, so the knob stays solid white.
+$form-switch-color-dark:            $white !default;
 $link-color-dark:                   $white !default;
 $link-hover-color-dark:             darken($white, 20%) !default;

@@ -2465,7 +2465,7 @@ textarea.form-control-lg {
   padding-right: 2.5em;
 }
 .form-switch .form-check-input {
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
   width: 2em;
   margin-right: -2.5em;
   background-image: var(--bs-form-switch-bg);
@@ -2479,7 +2479,7 @@ textarea.form-control-lg {
   }
 }
 .form-switch .form-check-input:focus {
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%239d9fa2'/%3e%3c/svg%3e");
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 .form-switch .form-check-input:checked {
   background-position: left center;
@@ -2511,7 +2511,7 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] .form-switch .form-check-input:not(:checked):not(:focus) {
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 .form-range {
@@ -12321,6 +12321,10 @@ legend {
   text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+.form-switch .form-check-input:not(:checked) {
+  background-color: #ced4da;
+}
+
 .nav-tabs .nav-link {
   background-image: linear-gradient(#313539, #34393d 40%, #373b40);
   filter: none;
@@ -12887,6 +12891,9 @@ legend {
 [data-bs-theme=dark] .accordion {
   --bs-accordion-bg: #32383e;
   --bs-accordion-active-color: #fff;
+}
+[data-bs-theme=dark] .form-switch .form-check-input:not(:checked) {
+  background-color: #7a8288;
 }
 [data-bs-theme=dark] .tooltip {
   --bs-tooltip-bg: #f8f9fa;
